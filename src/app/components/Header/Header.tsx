@@ -8,15 +8,15 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <>
-      <header className="w-full bg-white shadow-md z-50">
-        <nav className="flex items-center justify-between py-4 px-7">
+      <header className="w-full bg-white z-50">
+        <nav className="flex items-center justify-between py-4 px-7 relative">
           <MenuBurger />
-          <div className="flex justify-center">
+          <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 z-50">
             <div>
               <Image src="/images/logo.png" width={170} height={30} alt="Logo" />
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end absolute right-7 z-50">
             <Link href="https://www.instagram.com/chiropracteurajaccio/?hl=fr" className="relative w-6 h-6 text-customTitle" target="_blank" rel="noopener noreferrer">
               <Image src="/images/instagram-icon.svg" alt="Instagram" fill className="object-contain" />
             </Link>

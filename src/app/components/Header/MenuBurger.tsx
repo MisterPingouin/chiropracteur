@@ -13,32 +13,71 @@ const MenuBurger = () => {
 
   const menuLinks = [
     { href: '#qui-suis-je', label: 'Qui suis-je ?' },
-    { href: '#chiropraxie', label: 'La Chiropraxie' },
+    { href: '#chiropraxie', label: 'La chiropraxie' },
     { href: '#pourquoi-consulter', label: 'Pourquoi consulter ?' },
     { href: '#contact-acces', label: 'Contact & accès' },
-    { href: '#prendre-rendez-vous', label: 'Prendre rendez-vous' }
+    { href: 'https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)', label: 'Prendre rendez-vous' }
   ];
 
+  const menuVariants = {
+    open: {
+      y: '0',
+      transition: {
+        type: 'tween',
+        duration: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.1,
+      },
+    },
+    closed: {
+      y: '-100%',
+      transition: {
+        type: 'tween',
+        duration: 0.5,
+        when: 'afterChildren',
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const linkVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    closed: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
-    <div className="relative text-black text-18px font-bold z-50">
+    <div className="relative text-black text-25px font-light z-40">
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
       <motion.div
-        initial={{ y: '-100%' }}
-        animate={{ y: isOpen ? 0 : '-100%' }}
-        transition={{ type: 'tween', duration: 0.5 }}
-        className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center tracking-wide justify-center z-40"
+        className="fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] bg-white flex flex-col tracking-wide z-30"
+        initial="closed"
+        animate={isOpen ? 'open' : 'closed'}
+        variants={menuVariants}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-6">
-          {menuLinks.map(({ href, label }) => (
-            <a
+        <div className="flex flex-col p-8 mt-6 justify-start space-y-6">
+          {menuLinks.map(({ href, label }, index) => (
+            <motion.a
               key={href}
               href={href}
-              className="hover:underline"
+              className={`hover:underline border-b border-[#707070] pb-4 ${index === menuLinks.length - 1 ? 'mb-6' : ''}`}
               onClick={toggleMenu}
+              variants={linkVariants}
             >
               {label}
-            </a>
+            </motion.a>
           ))}
         </div>
       </motion.div>
