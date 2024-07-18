@@ -14,14 +14,16 @@ const config: Config = {
       },
       fontSize: {
         '25px' : '1.5625rem',
+        '30px' : '1.875rem',
       },
       colors: {
-        customTitle: '#EFD7CA',
+        customFont: '#EFD7CA',
+        customTitle: '#D7AE9F',
         customHover: '#E3B8A1',
         borderColor: '#707070',
       },
       lineHeight: {
-        '30px' : '30px',
+        '22px' : '22px',
       },
     },
   },

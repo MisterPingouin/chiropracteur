@@ -62,7 +62,7 @@ const MenuBurger = () => {
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
       <motion.div
-        className="fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] bg-white flex flex-col tracking-wide z-30"
+        className="fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] flex flex-col tracking-wide z-30"
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
         variants={menuVariants}

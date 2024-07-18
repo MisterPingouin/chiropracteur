@@ -9,20 +9,20 @@ const Header = () => {
   return (
     <>
       <header className="w-full bg-white z-50">
-        <nav className="flex items-center justify-between py-4 px-7 relative">
+        <nav className="flex items-center justify-between py-4 px-7">
           <MenuBurger />
-          <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 z-50">
+          <div className="flex justify-center z-50">
             <div>
-              <Image src="/images/logo.png" width={170} height={30} alt="Logo" />
+              <Image src="/images/logo.png" width={170} height={30} alt="Logo" className='w-auto h-auto' />
             </div>
           </div>
-          <div className="flex justify-end absolute right-7 z-50">
-            <Link href="https://www.instagram.com/chiropracteurajaccio/?hl=fr" className="relative w-6 h-6 text-customTitle" target="_blank" rel="noopener noreferrer">
-              <Image src="/images/instagram-icon.svg" alt="Instagram" fill className="object-contain" />
+          <div className="flex justify-end z-50">
+            <Link href="https://www.instagram.com/chiropracteurajaccio/?hl=fr" className="relative w-6 h-6 text-customFont" target="_blank" rel="noopener noreferrer">
+              <Image src="/images/instagram-icon.svg" alt="Instagram" fill className="object-contain h-auto w-auto"  />
             </Link>
           </div>
         </nav>
-        <div className="flex w-full h-[60px] bg-customTitle items-center justify-center text-white py-2">
+        <div className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2">
           <Link href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)" className="text-customBlue font-bold text-18 leading-tight tracking-wide" target="_blank" rel="noopener noreferrer">
             PRENDRE RENDEZ-VOUS
           </Link>
