@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useMemo } from "react";
+import { motion } from "framer-motion";
 
 interface MenuButtonProps {
   isOpen: boolean;
@@ -11,28 +11,34 @@ interface MenuButtonProps {
 const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
   const variant = isOpen ? "opened" : "closed";
 
-  const variants = useMemo(() => ({
-    top: {
-      closed: { rotate: 0, translateY: 0 },
-      opened: { rotate: 45, translateY: 10 },
-    },
-    center: {
-      closed: { opacity: 1 },
-      opened: { opacity: 0 },
-    },
-    bottom: {
-      closed: { rotate: 0, translateY: 0 },
-      opened: { rotate: -45, translateY: -10 },
-    },
-  }), []);
+  const variants = useMemo(
+    () => ({
+      top: {
+        closed: { rotate: 0, translateY: 0 },
+        opened: { rotate: 45, translateY: 10 },
+      },
+      center: {
+        closed: { opacity: 1 },
+        opened: { opacity: 0 },
+      },
+      bottom: {
+        closed: { rotate: 0, translateY: 0 },
+        opened: { rotate: -45, translateY: -10 },
+      },
+    }),
+    []
+  );
 
-  const lineProps = useMemo(() => ({
-    stroke: "#000",
-    strokeWidth: 1,
-    vectorEffect: "non-scaling-stroke",
-    transition: { duration: 0.3 },
-    className: "line",
-  }), []);
+  const lineProps = useMemo(
+    () => ({
+      stroke: "#000",
+      strokeWidth: 1,
+      vectorEffect: "non-scaling-stroke",
+      transition: { duration: 0.3 },
+      className: "line",
+    }),
+    []
+  );
 
   const unitHeight = 30;
   const unitWidth = (unitHeight * 24) / 24;
