@@ -13,8 +13,11 @@ const config: Config = {
         title: ['var(--font-cormorant)', 'serif'],
       },
       fontSize: {
+        '17px' : '1.063rem',
+        '20px' : '1.3rem',
         '25px' : '1.5625rem',
         '30px' : '1.875rem',
+        '45px' : '2.813rem',
       },
       colors: {
         customFont: '#EFD7CA',

@@ -56,10 +56,11 @@ export default function Home() {
           alt="Image Chiropracteur Ajaccio"
           className="hidden w-full h-auto lg:block"
         />
-        <div className="flex flex-col justify-center items-center font-light px-6 mt-4">
-          <div id="qui-suis-je" className="flex flex-col px-2 pb-1">
-            <h1 className="text-customTitle text-30px px-3">Qui suis-je ?</h1>
-            <p className="leading-22px pb-6 px-2">
+        <div className="flex flex-col justify-center items-center font-light px-6 mt-4 lg:mt-14 lg:px-32">
+          <div className="lg:flex lg:items-center lg:justify-center lg:flex-row-reverse lg:gap-32">
+          <div id="qui-suis-je" className="flex flex-col lg:justify-start px-2 pb-1 lg:w-[500px]">
+            <h1 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">Qui suis-je ?</h1>
+            <p className="leading-22px pb-6 px-2 lg:text-20px">
               Passionnée depuis toujours par la santé et le corps humain, j’ai
               effectué mes 6 ans d’études à l’Institut Franco-Européen de
               Chiropraxie à Paris. Diplômée en 2017.
@@ -70,8 +71,16 @@ export default function Home() {
             width={374}
             height={372}
             alt="Image Chiropracteur Pauline"
-            className="w-auto h-auto"
+            className="w-auto h-auto lg:hidden"
           />
+                    <Image
+            src="/images/photos_cadre1.webp"
+            width={571}
+            height={571}
+            alt="Image Chiropracteur Pauline"
+            className="hidden w-auto h-auto lg:block"
+          />
+          </div>
           <motion.div
             ref={ref1}
             className="text-center text-base px-2 font-title uppercase leading-8 py-8"

@@ -49,6 +49,13 @@ const Header = () => {
                 alt="Logo"
                 className="w-auto h-auto"
               />
+                            {/* <Image
+                src="/images/logo.png"
+                width={396}
+                height={71}
+                alt="Logo"
+                className="w-auto h-auto"
+              /> */}
             </div>
           </div>
           <div className="flex justify-end z-50">
@@ -65,15 +72,16 @@ const Header = () => {
         </div>
             <Link
               href="https://www.instagram.com/chiropracteurajaccio/?hl=fr"
-              className="relative w-6 h-6 text-customFont hover:text-customHover"
+              className="relative w-6 h-6 text-customFont hover:text-customHover lg:h-9 lg:w-9"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
                 src="/images/instagram-icon.svg"
                 alt="Instagram"
-                fill
-                className="object-contain h-auto w-auto"
+                width={24}
+                height={24}
+                className="object-contain h-auto w-auto lg:h-9 lg:w-9"
               />
             </Link>
             </div>
