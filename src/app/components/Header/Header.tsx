@@ -60,16 +60,11 @@ const Header = () => {
           </div>
           <div className="flex justify-end z-50">
             <div className="flex justify-center items-center gap-12">
-            <div className="flex h-[65px] w-[317px] bg-customFont hover:bg-customHover items-center justify-center text-white pt-1">
-          <Link
-            href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            className="font-bold text-21px"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PRENDRE RENDEZ-VOUS
+            <Link href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)" passHref legacyBehavior>
+            <a className="flex h-[65px] w-[317px] bg-customFont hover:bg-customHover items-center justify-center text-white pt-1 font-bold text-21px" target="_blank" rel="noopener noreferrer">
+              PRENDRE RENDEZ-VOUS
+            </a>
           </Link>
-        </div>
             <Link
               href="https://www.instagram.com/chiropracteurajaccio/?hl=fr"
               className="relative w-6 h-6 text-customFont hover:text-customHover lg:h-9 lg:w-9"

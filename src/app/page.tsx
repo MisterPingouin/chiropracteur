@@ -32,16 +32,19 @@ export default function Home() {
     <div>
       <Header />
       <main>
-        <div className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2 lg:hidden">
-          <Link
+      <Link
             href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            className="font-bold text-18 leading-tight tracking-wide"
-            target="_blank"
-            rel="noopener noreferrer"
+            passHref
+            legacyBehavior
           >
-            PRENDRE RENDEZ-VOUS
+            <a
+              className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2 lg:hidden font-bold text-18 leading-tight tracking-wide"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PRENDRE RENDEZ-VOUS
+            </a>
           </Link>
-        </div>
         <Image
           src="/images/img1chiro.png"
           width={428}
@@ -200,18 +203,14 @@ export default function Home() {
             className="w-auto h-auto mb-6 lg:mb-12"
           />
         </div>
-        <div
-          className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2"
-        >
-          <Link
-            href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            className="font-bold text-18 leading-tight tracking-wide lg:text-21px"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PRENDRE RENDEZ-VOUS
+        <div>
+        <Link href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)" passHref legacyBehavior>
+            <a className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2 font-bold text-18 leading-tight tracking-wide lg:text-21px">
+              PRENDRE RENDEZ-VOUS
+            </a>
           </Link>
-        </div>
+</div>
+
       </main>
       <Footer />
     </div>
