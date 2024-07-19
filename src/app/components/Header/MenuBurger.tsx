@@ -28,9 +28,13 @@ const MenuBurger: React.FC = () => {
   };
 
   const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setScrollTarget(href);
-    toggleMenu();
+    if (href.startsWith("http")) {
+      window.location.href = href;
+    } else {
+      e.preventDefault();
+      setScrollTarget(href);
+      toggleMenu();
+    }
   };
 
   const menuLinks = [
