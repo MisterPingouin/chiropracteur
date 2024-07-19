@@ -1,40 +1,65 @@
 "use client";
 
-import React, { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import MenuButton from './MenuButton';
+import React, { useState, useCallback, MouseEvent } from "react";
+import { motion } from "framer-motion";
+import MenuButton from "./MenuButton";
 
-const MenuBurger = () => {
+const MenuBurger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [scrollTarget, setScrollTarget] = useState<string | null>(null);
 
   const toggleMenu = useCallback(() => {
-    setIsOpen(prevState => !prevState);
-  }, []);
+    if (isOpen) {
+      setIsAnimating(true);
+    }
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+
+  const handleAnimationComplete = () => {
+    setIsAnimating(false);
+    if (scrollTarget) {
+      const targetElement = document.querySelector(scrollTarget);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+      setScrollTarget(null);
+    }
+  };
+
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setScrollTarget(href);
+    toggleMenu();
+  };
 
   const menuLinks = [
-    { href: '#qui-suis-je', label: 'Qui suis-je ?' },
-    { href: '#chiropraxie', label: 'La chiropraxie' },
-    { href: '#pourquoi-consulter', label: 'Pourquoi consulter ?' },
-    { href: '#contact-acces', label: 'Contact & accès' },
-    { href: 'https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)', label: 'Prendre rendez-vous' }
+    { href: "#qui-suis-je", label: "Qui suis-je ?" },
+    { href: "#chiropraxie", label: "La chiropraxie" },
+    { href: "#pourquoi-consulter", label: "Pourquoi consulter ?" },
+    { href: "#contact-acces", label: "Contact & accès" },
+    {
+      href: "https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)",
+      label: "Prendre rendez-vous",
+    },
   ];
 
   const menuVariants = {
     open: {
-      y: '0',
+      y: "0",
       transition: {
-        type: 'tween',
+        type: "tween",
         duration: 0.5,
-        when: 'beforeChildren',
+        when: "beforeChildren",
         staggerChildren: 0.1,
       },
     },
     closed: {
-      y: '-100%',
+      y: "-100%",
       transition: {
-        type: 'tween',
+        type: "tween",
         duration: 0.5,
-        when: 'afterChildren',
+        when: "afterChildren",
         staggerChildren: 0.1,
       },
     },
@@ -62,18 +87,23 @@ const MenuBurger = () => {
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
       <motion.div
-        className="fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] flex flex-col tracking-wide z-30"
+        className={`fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] ${
+          isOpen || isAnimating ? "bg-white" : ""
+        } flex flex-col tracking-wide z-30`}
         initial="closed"
-        animate={isOpen ? 'open' : 'closed'}
+        animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
+        onAnimationComplete={handleAnimationComplete}
       >
         <div className="flex flex-col p-8 mt-6 justify-start space-y-6">
           {menuLinks.map(({ href, label }, index) => (
             <motion.a
               key={href}
               href={href}
-              className={`hover:underline border-b border-[#707070] pb-4 ${index === menuLinks.length - 1 ? 'mb-6' : ''}`}
-              onClick={toggleMenu}
+              className={`border-b border-[#707070] pb-4 ${
+                index === menuLinks.length - 1 ? "mb-6" : ""
+              }`}
+              onClick={(e) => handleLinkClick(e, href)}
               variants={linkVariants}
             >
               {label}

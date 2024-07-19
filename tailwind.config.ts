@@ -21,9 +21,11 @@ const config: Config = {
         customTitle: '#D7AE9F',
         customHover: '#E3B8A1',
         borderColor: '#707070',
+        line: '#FCD3BB',
       },
       lineHeight: {
         '22px' : '22px',
+        '31px' : '31px',
       },
     },
   },
