@@ -201,11 +201,11 @@ export default function Home() {
           />
         </div>
         <div
-          className="flex w-full h-[60px] lg:h-[81px] bg-customFont items-center justify-center text-white py-2"
+          className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2"
         >
           <Link
             href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            className="text-customBlue font-bold text-18 leading-tight tracking-wide lg:text-21px"
+            className="font-bold text-18 leading-tight tracking-wide lg:text-21px"
             target="_blank"
             rel="noopener noreferrer"
           >
