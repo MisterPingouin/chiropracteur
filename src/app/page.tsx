@@ -75,15 +75,15 @@ export default function Home() {
           />
                     <Image
             src="/images/photos_cadre1.webp"
-            width={571}
-            height={571}
+            width={577}
+            height={577}
             alt="Image Chiropracteur Pauline"
             className="hidden w-auto h-auto lg:block"
           />
           </div>
           <motion.div
             ref={ref1}
-            className="text-center text-base px-2 font-title uppercase leading-8 py-8"
+            className="text-center text-base px-2 font-title uppercase leading-8 py-8 lg:text-26px lg:leading-50px lg:max-w-[1070px] lg:my-6"
             initial="hidden"
             animate={isVisible1 ? "visible" : "hidden"}
             variants={textVariants}
@@ -97,25 +97,33 @@ export default function Home() {
             width={42}
             height={42}
             alt="Image Chiropracteur Ajaccio"
-            className="w-auto h-auto mb-6"
+            className="w-auto h-auto mb-6 lg:mb-12"
           />
           <Image
             src="/images/img2chiro.png"
             width={374}
             height={372}
             alt="Image Chiropracteur Ajaccio"
-            className="mb-6"
+            className="lg:hidden mb-6"
           />
+                    <Image
+            src="/images/img2chiro.jpg"
+            width={1200}
+            height={551}
+            alt="Image Chiropracteur Ajaccio"
+            className="hidden w-full h-auto mb-6 lg:block"
+          />
+          <div className="lg:flex lg:items-center lg:justify-center lg:gap-32 lg:mb-10">
           <div id="chiropraxie" className="flex flex-col px-2 pb-1">
-            <h2 className="text-customTitle text-30px px-3">La chiropraxie </h2>
-            <p className="leading-22px px-2">
+            <h2 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">La chiropraxie </h2>
+            <p className="leading-22px px-2 lg:w-[500px] lg:text-20px">
               La chiropraxie est une profession de santé manuelle visant à
               prévenir et corriger les déséquilibres de notre corps. Sa vision
               globale a pour but de nettoyer notre système nerveux responsable
               de notre vitalité, de nos différents blocages, afin de permettre
               au corps de retrouver sa pleine capacité d’auto-guérison.
             </p>
-            <p className="leading-22px pb-6 px-2">
+            <p className="leading-22px pb-6 px-2 lg:w-[500px] lg:text-20px">
               La chiropraxie s’adresse et s’adapte à tous, du nouveau-né aux
               seniors, en passant par les sportifs et les femmes enceintes.{" "}
             </p>
@@ -125,11 +133,19 @@ export default function Home() {
             width={374}
             height={372}
             alt="Image Chiropracteur os"
-            className="w-auto h-auto"
+            className="w-auto h-auto hidden"
           />
+                    <Image
+            src="/images/photos_cadre2.webp"
+            width={577}
+            height={577}
+            alt="Image Chiropracteur os"
+            className="hidden w-auto h-auto lg:block"
+          />
+          </div>
           <motion.div
             ref={ref2}
-            className="text-center text-base px-2 font-title uppercase leading-8 py-8"
+            className="text-center text-base px-2 font-title uppercase leading-8 py-8 lg:text-26px lg:max-w-[1070px] lg:my-6"
             initial="hidden"
             animate={isVisible2 ? "visible" : "hidden"}
             variants={textVariants}
@@ -141,49 +157,55 @@ export default function Home() {
             width={42}
             height={42}
             alt="Image Chiropracteur Ajaccio"
-            className="w-auto h-auto mb-6"
+            className="w-auto h-auto mt-2 mb-6 lg:mb-12"
           />
           <div className="w-full h-0.5 bg-line mb-6"></div>
           <div
             id="pourquoi-consulter"
             className="flex flex-col justify-center items-center px-2 pb-1"
           >
-            <h3 className="text-customTitle text-25px mb-3">
+            <h3 className="text-customTitle text-25px lg:text-45px mb-2">
               Pour quels motifs consulter ?
             </h3>
-            <p className="leading-22px text-center mb-8">
+            <p className="leading-22px text-center mb-8 lg:text-20px">
               Voici quelques exemples de prise en charge chiropratique{" "}
             </p>
-            <p className="text-center font-title">PRÉVENTION :</p>
-            <p className="leading-22px text-center px-6 mb-6">
+            <p className="text-center font-title lg:text-30px">PRÉVENTION :</p>
+            <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Bien-être, croissance, suivi de grossesse, suivi sportif,
               améliorer sa posture, prévenir l’arthrose…
             </p>
-            <p className="text-center font-title">PROBLÈMES DE DOS :</p>
-            <p className="leading-22px text-center px-6 mb-6">
+            <p className="text-center font-title lg:text-30px">PROBLÈMES DE DOS :</p>
+            <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Scoliose, cervicalgie, dorsalgie, lombalgie, torticolis,
               sciatique…
             </p>
-            <p className="text-center font-title">MAUX DE TÊTE :</p>
-            <p className="leading-22px text-center px-6 mb-6">
+            <p className="text-center font-title lg:text-30px">MAUX DE TÊTE :</p>
+            <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Céphalée, migraine, vertige d’origine cervicale, névralgie
               d’Arnold…
             </p>
-            <p className="text-center font-title">DOULEURS ARTICULAIRES :</p>
-            <p className="leading-22px text-center px-6 mb-6">
+            <p className="text-center font-title lg:text-30px">DOULEURS ARTICULAIRES :</p>
+            <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Épaule, coude, poignet, hanche, genou, cheville, entorse,
               tendinite…
             </p>
-            <div className="w-full h-0.5 bg-line mb-12"></div>
+            <div className="w-full h-0.5 bg-line lg:w-[929px] lg:mt-6 mb-12"></div>
           </div>
+          <Image
+            src="/images/Arrowdown.png"
+            width={42}
+            height={42}
+            alt="Image Chiropracteur Ajaccio"
+            className="w-auto h-auto mb-6 lg:mb-12"
+          />
         </div>
         <div
-          id="prendre-rdv"
-          className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2"
+          className="flex w-full h-[60px] lg:h-[81px] bg-customFont items-center justify-center text-white py-2"
         >
           <Link
             href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            className="text-customBlue font-bold text-18 leading-tight tracking-wide"
+            className="text-customBlue font-bold text-18 leading-tight tracking-wide lg:text-21px"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -47,23 +47,23 @@ const Header = () => {
                 width={239}
                 height={41}
                 alt="Logo"
-                className="w-auto h-auto"
+                className="w-auto h-auto lg:hidden"
               />
-                            {/* <Image
+                            <Image
                 src="/images/logo.png"
                 width={396}
                 height={71}
                 alt="Logo"
-                className="w-auto h-auto"
-              /> */}
+                className="hidden w-[396px] h-auto lg:block"
+              />
             </div>
           </div>
           <div className="flex justify-end z-50">
             <div className="flex justify-center items-center gap-12">
-            <div className="flex h-[65px] w-[317px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2s">
+            <div className="flex h-[65px] w-[317px] bg-customFont hover:bg-customHover items-center justify-center text-white pt-1">
           <Link
             href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            className="font-bold text-18 leading-tight tracking-wide"
+            className="font-bold text-21px"
             target="_blank"
             rel="noopener noreferrer"
           >

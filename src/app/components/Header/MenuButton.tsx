@@ -31,6 +31,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
     strokeWidth: 1,
     vectorEffect: "non-scaling-stroke",
     transition: { duration: 0.3 },
+    className: "line",
   }), []);
 
   const unitHeight = 30;
@@ -39,7 +40,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
   return (
     <button
       onClick={toggleMenu}
-      className="pt-3 focus:outline-none z-50 relative"
+      className="pt-3 lg:pt-6 focus:outline-none z-50 relative"
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
       <motion.svg
@@ -48,6 +49,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
         preserveAspectRatio="none"
         width={24}
         height={24}
+        className="lg:w-14 lg:h-14"
       >
         <motion.line
           x1="0"
@@ -58,6 +60,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
           initial="closed"
           animate={variant}
           {...lineProps}
+          className="stroke-1"
         />
         <motion.line
           x1="0"
@@ -68,6 +71,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
           initial="closed"
           animate={variant}
           {...lineProps}
+          className="stroke-1"
         />
         <motion.line
           x1="0"
@@ -78,6 +82,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, toggleMenu }) => {
           initial="closed"
           animate={variant}
           {...lineProps}
+          className="stroke-1"
         />
       </motion.svg>
     </button>

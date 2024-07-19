@@ -14,7 +14,9 @@ const config: Config = {
       },
       fontSize: {
         '17px' : '1.063rem',
+        '21px' : '1.313rem',
         '20px' : '1.3rem',
+        '26px' : '1.625rem',
         '25px' : '1.5625rem',
         '30px' : '1.875rem',
         '45px' : '2.813rem',
@@ -29,6 +31,7 @@ const config: Config = {
       lineHeight: {
         '22px' : '22px',
         '31px' : '31px',
+        '50px' : '50px',
       },
     },
   },

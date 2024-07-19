@@ -17,8 +17,8 @@ const Footer = () => {
  <h4 className="font-light text-customTitle text-45px mt-14 mb-20">Contact & accès</h4>
  <div className="flex">
     <div className="flex flex-col w-[50%]">
-<div className=" text-20px">ME CONTACTER</div>
-<div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-12"></div>
+<div className="text-20px">ME CONTACTER</div>
+<div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
 <div className="flex">
 <div className="flex items-center">
 <Image
@@ -48,8 +48,8 @@ chiroajaccio@gmail.com
 </div>
     </div>
     <div className="flex flex-col w-[50%]">
-    <div className="">VENIR AU CABINET</div>
-    <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-12"></div>
+    <div className="text-20px">VENIR AU CABINET</div>
+    <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
     <div className="flex">
     <div className="flex items-center">
     <Image
