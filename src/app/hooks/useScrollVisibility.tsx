@@ -4,21 +4,29 @@ const useScrollVisibility = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const checkVisibility = () => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-      if (!(rect.bottom < 0 || rect.top - viewHeight >= 0)) {
-        setIsVisible(true);
-      }
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      {
+        threshold: 0.8, 
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
     return () => {
-      window.removeEventListener('scroll', checkVisibility);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
   }, []);
 

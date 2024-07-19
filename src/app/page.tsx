@@ -25,13 +25,14 @@ const textVariants = {
 };
 
 export default function Home() {
-  const [ref, isVisible] = useScrollVisibility();
+  const [ref1, isVisible1] = useScrollVisibility();
+  const [ref2, isVisible2] = useScrollVisibility();
 
   return (
     <div>
       <Header />
       <main>
-      <div className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2 lg:hidden">
+        <div className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2 lg:hidden">
           <Link
             href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
             className="font-bold text-18 leading-tight tracking-wide"
@@ -42,16 +43,16 @@ export default function Home() {
           </Link>
         </div>
         <Image
-          src="/images/img1chiro.jpg"
+          src="/images/img1chiro.png"
           width={428}
           height={323}
           alt="Image Chiropracteur Ajaccio"
           className="w-auto h-auto lg:hidden"
         />
-                <Image
-          src="/images/img1chiro.jpg"
+        <Image
+          src="/images/img1chiro.png"
           width={700}
-          height={380}
+          height={345}
           alt="Image Chiropracteur Ajaccio"
           className="hidden w-full h-auto lg:block"
         />
@@ -72,10 +73,10 @@ export default function Home() {
             className="w-auto h-auto"
           />
           <motion.div
-            ref={ref}
+            ref={ref1}
             className="text-center text-base px-2 font-title uppercase leading-8 py-8"
             initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
+            animate={isVisible1 ? "visible" : "hidden"}
             variants={textVariants}
           >
             J’ai la volonté de remettre la santé au cœur de nos vies. c’est
@@ -118,10 +119,10 @@ export default function Home() {
             className="w-auto h-auto"
           />
           <motion.div
-            ref={ref}
+            ref={ref2}
             className="text-center text-base px-2 font-title uppercase leading-8 py-8"
             initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
+            animate={isVisible2 ? "visible" : "hidden"}
             variants={textVariants}
           >
             Un système nerveux en pleine santé est un corps en pleine santé.{" "}
