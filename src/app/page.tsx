@@ -286,15 +286,6 @@ chiroajaccio@gmail.com
           alt="Map pauline Chiropracteur Ajaccio"
           className="hidden w-full h-auto lg:block mt-20"
         />
- <div className="hidden lg:flex flex-col">
- <Image
-                src="/images/logo.png"
-                width={210}
-                height={38}
-                alt="Logo"
-                className="w-[210px] h-auto mt-14 pb-6"
-              />
- </div>
  </div>
       </main>
     </div>

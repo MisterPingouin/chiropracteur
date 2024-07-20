@@ -3,18 +3,21 @@
 import React, { useState, useCallback, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import MenuButton from "./MenuButton";
+import { usePathname } from "next/navigation";
 
 const MenuBurger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [scrollTarget, setScrollTarget] = useState<string | null>(null);
+  const pathname = usePathname(); 
 
   const toggleMenu = useCallback(() => {
+    if (pathname === "/mentions-legales") return; 
     if (isOpen) {
       setIsAnimating(true);
     }
     setIsOpen(!isOpen);
-  }, [isOpen]);
+  }, [isOpen, pathname]);
 
   const handleAnimationComplete = () => {
     setIsAnimating(false);
