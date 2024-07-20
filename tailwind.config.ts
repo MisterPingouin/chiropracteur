@@ -20,6 +20,7 @@ const config: Config = {
         '25px' : '1.5625rem',
         '30px' : '1.875rem',
         '45px' : '2.813rem',
+        '47px' : '2.938rem',
       },
       colors: {
         customFont: '#EFD7CA',

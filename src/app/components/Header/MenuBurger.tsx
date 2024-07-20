@@ -87,7 +87,7 @@ const MenuBurger: React.FC = () => {
   };
 
   return (
-    <div className="relative text-black text-25px font-light z-40">
+    <div className="relative text-black text-25px font-light z-40 lg:text-47px">
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
       <motion.div
