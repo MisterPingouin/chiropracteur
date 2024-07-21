@@ -97,7 +97,7 @@ export default function Home() {
             width={42}
             height={42}
             alt="Image Chiropracteur Ajaccio"
-            className="w-auto h-auto mb-6 lg:mb-12"
+            className="w-[42px] lg:w-[47px] h-auto mb-6 lg:mb-12"
           />
           <Image
             src="/images/img2chiro.png"
@@ -157,14 +157,14 @@ export default function Home() {
             width={42}
             height={42}
             alt="Image Chiropracteur Ajaccio"
-            className="w-auto h-auto mt-2 mb-6 lg:mb-12"
+            className="w-[42px] lg:w-[47px] h-auto mt-2 mb-6 lg:mb-12"
           />
           <div className="w-full h-0.5 bg-line mb-6"></div>
           <div
             id="pourquoi-consulter"
             className="flex flex-col justify-center items-center px-2 pb-1"
           >
-            <h3 className="text-customTitle text-25px lg:text-45px mb-2">
+            <h3 className="text-customTitle text-25px lg:text-45px mb-2 text-center">
               Pour quels motifs consulter ?
             </h3>
             <p className="leading-22px text-center mb-8 lg:text-20px">
@@ -197,7 +197,7 @@ export default function Home() {
             width={42}
             height={42}
             alt="Image Chiropracteur Ajaccio"
-            className="w-auto h-auto mb-6 lg:mb-12"
+            className="w-[42px] lg:w-[47px] h-auto mb-6 lg:mb-12"
           />
         </div>
         <div>
