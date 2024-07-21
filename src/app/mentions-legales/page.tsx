@@ -19,13 +19,13 @@ const MentionsLegales = () => {
       <p>Statut du propriétaire : particulier</p>
       <p>Le Propriétaire est : Pauline Marlin</p>
       <p>Adresse postale du propriétaire : 6 Bd Albert 1er, 20000 Ajaccio</p>
-      <p className="pt-8">Le Créateur du site est : SAS What’s In The Box</p>
+      <p className="pt-8">Le Créateur du site est : SAS What&rsquo;s In The Box</p>
       <p>Le Responsable de la publication est : Pauline Marlin</p>
       <p>Contacter le responsable de la publication : chiroajaccio@gmail.com</p>
       <p>Le responsable de la publication est une personne physique</p>
       <p className="pt-8">Le Webmaster est : Tamara Syrovatsky</p>
       <p>Contacter le Webmaster : contact@tamarasyrovatsky.com</p>
-      <p>L'hébergeur du site est : Vercel</p>
+      <p>L&apos;hébergeur du site est : Vercel</p>
       <div className="pt-8 mb-8">
         <Link href="/" className="text-customTitle hover:text-customHover">
           Retour à la page précédente
