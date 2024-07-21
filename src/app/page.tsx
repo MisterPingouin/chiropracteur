@@ -29,19 +29,19 @@ export default function Home() {
   return (
     <div>
       <main>
-      <Link
-            href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
-            passHref
-            legacyBehavior
+        <Link
+          href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
+          passHref
+          legacyBehavior
+        >
+          <a
+            className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2 lg:hidden font-bold text-18 leading-tight tracking-wide"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <a
-              className="flex w-full h-[60px] bg-customFont items-center justify-center text-white py-2 lg:hidden font-bold text-18 leading-tight tracking-wide"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              PRENDRE RENDEZ-VOUS
-            </a>
-          </Link>
+            PRENDRE RENDEZ-VOUS
+          </a>
+        </Link>
         <Image
           src="/images/img1chiro.png"
           width={428}
@@ -58,28 +58,33 @@ export default function Home() {
         />
         <div className="flex flex-col justify-center items-center font-light px-6 mt-4 lg:mt-14 lg:px-32">
           <div className="lg:flex lg:items-center lg:justify-center lg:flex-row-reverse lg:gap-32">
-          <div id="qui-suis-je" className="flex flex-col lg:justify-start px-2 pb-1 lg:w-[500px]">
-            <h1 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">Qui suis-je ?</h1>
-            <p className="leading-22px pb-6 px-2 lg:text-20px">
-              Passionnée depuis toujours par la santé et le corps humain, j’ai
-              effectué mes 6 ans d’études à l’Institut Franco-Européen de
-              Chiropraxie à Paris. Diplômée en 2017.
-            </p>
-          </div>
-          <Image
-            src="/images/photos_cadre1.webp"
-            width={374}
-            height={372}
-            alt="Image Chiropracteur Pauline"
-            className="w-auto h-auto lg:hidden"
-          />
-                    <Image
-            src="/images/photos_cadre1.webp"
-            width={577}
-            height={577}
-            alt="Image Chiropracteur Pauline"
-            className="hidden w-auto h-auto lg:block"
-          />
+            <div
+              id="qui-suis-je"
+              className="flex flex-col lg:justify-start px-2 pb-1 lg:w-[500px]"
+            >
+              <h1 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">
+                Qui suis-je ?
+              </h1>
+              <p className="leading-22px pb-6 px-2 lg:text-20px">
+                Passionnée depuis toujours par la santé et le corps humain, j’ai
+                effectué mes 6 ans d’études à l’Institut Franco-Européen de
+                Chiropraxie à Paris. Diplômée en 2017.
+              </p>
+            </div>
+            <Image
+              src="/images/photos_cadre1.webp"
+              width={374}
+              height={372}
+              alt="Image Chiropracteur Pauline"
+              className="w-auto h-auto lg:hidden"
+            />
+            <Image
+              src="/images/photos_cadre1.webp"
+              width={577}
+              height={577}
+              alt="Image Chiropracteur Pauline"
+              className="hidden w-auto h-auto lg:block"
+            />
           </div>
           <motion.div
             ref={ref1}
@@ -106,7 +111,7 @@ export default function Home() {
             alt="Image Chiropracteur Ajaccio"
             className="lg:hidden mb-6"
           />
-                    <Image
+          <Image
             src="/images/img2chiro.jpg"
             width={1200}
             height={551}
@@ -114,34 +119,36 @@ export default function Home() {
             className="hidden w-full h-auto mb-6 lg:block"
           />
           <div className="lg:flex lg:items-center lg:justify-center lg:gap-32 lg:mb-10">
-          <div id="chiropraxie" className="flex flex-col px-2 pb-1">
-            <h2 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">La chiropraxie </h2>
-            <p className="leading-22px px-2 lg:w-[500px] lg:text-20px">
-              La chiropraxie est une profession de santé manuelle visant à
-              prévenir et corriger les déséquilibres de notre corps. Sa vision
-              globale a pour but de nettoyer notre système nerveux responsable
-              de notre vitalité, de nos différents blocages, afin de permettre
-              au corps de retrouver sa pleine capacité d’auto-guérison.
-            </p>
-            <p className="leading-22px pb-6 px-2 lg:w-[500px] lg:text-20px">
-              La chiropraxie s’adresse et s’adapte à tous, du nouveau-né aux
-              seniors, en passant par les sportifs et les femmes enceintes.{" "}
-            </p>
-          </div>
-          <Image
-            src="/images/photos_cadre2.webp"
-            width={374}
-            height={372}
-            alt="Image Chiropracteur os"
-            className="w-auto h-auto hidden"
-          />
-                    <Image
-            src="/images/photos_cadre2.webp"
-            width={577}
-            height={577}
-            alt="Image Chiropracteur os"
-            className="hidden w-auto h-auto lg:block"
-          />
+            <div id="chiropraxie" className="flex flex-col px-2 pb-1">
+              <h2 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">
+                La chiropraxie{" "}
+              </h2>
+              <p className="leading-22px px-2 lg:w-[500px] lg:text-20px">
+                La chiropraxie est une profession de santé manuelle visant à
+                prévenir et corriger les déséquilibres de notre corps. Sa vision
+                globale a pour but de nettoyer notre système nerveux responsable
+                de notre vitalité, de nos différents blocages, afin de permettre
+                au corps de retrouver sa pleine capacité d’auto-guérison.
+              </p>
+              <p className="leading-22px pb-6 px-2 lg:w-[500px] lg:text-20px">
+                La chiropraxie s’adresse et s’adapte à tous, du nouveau-né aux
+                seniors, en passant par les sportifs et les femmes enceintes.{" "}
+              </p>
+            </div>
+            <Image
+              src="/images/photos_cadre2.webp"
+              width={374}
+              height={372}
+              alt="Image Chiropracteur os"
+              className="w-auto h-auto hidden"
+            />
+            <Image
+              src="/images/photos_cadre2.webp"
+              width={577}
+              height={577}
+              alt="Image Chiropracteur os"
+              className="hidden w-auto h-auto lg:block"
+            />
           </div>
           <motion.div
             ref={ref2}
@@ -175,17 +182,23 @@ export default function Home() {
               Bien-être, croissance, suivi de grossesse, suivi sportif,
               améliorer sa posture, prévenir l’arthrose…
             </p>
-            <p className="text-center font-title lg:text-30px">PROBLÈMES DE DOS :</p>
+            <p className="text-center font-title lg:text-30px">
+              PROBLÈMES DE DOS :
+            </p>
             <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Scoliose, cervicalgie, dorsalgie, lombalgie, torticolis,
               sciatique…
             </p>
-            <p className="text-center font-title lg:text-30px">MAUX DE TÊTE :</p>
+            <p className="text-center font-title lg:text-30px">
+              MAUX DE TÊTE :
+            </p>
             <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Céphalée, migraine, vertige d’origine cervicale, névralgie
               d’Arnold…
             </p>
-            <p className="text-center font-title lg:text-30px">DOULEURS ARTICULAIRES :</p>
+            <p className="text-center font-title lg:text-30px">
+              DOULEURS ARTICULAIRES :
+            </p>
             <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Épaule, coude, poignet, hanche, genou, cheville, entorse,
               tendinite…
@@ -201,92 +214,102 @@ export default function Home() {
           />
         </div>
         <div>
-        <Link href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)" passHref legacyBehavior>
+          <Link
+            href="https://www.annuaire-chiropracteur.fr/chiropracteur/corse-du-sud/ajaccio-20000/chiropracteur-ajaccio-pauline-marlin#:~:text=Pr%C3%A9sentation%20de%20Chiropracteur%20Ajaccio%20Pauline,les%20r%C3%A9seaux%20sociaux%20(%40ChiropracteurAjaccio)"
+            passHref
+            legacyBehavior
+          >
             <a className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2 font-bold text-18 leading-tight tracking-wide lg:text-21px">
               PRENDRE RENDEZ-VOUS
             </a>
           </Link>
-</div>
-<div className="lg:hidden px-8">
-      <h4 className="text-customTitle text-2xl mt-6">Contact & accès</h4>
-        <div className="flex flex-col justify-center items-center">
         </div>
+        <div className="lg:hidden px-8">
+          <h4 className="text-customTitle text-2xl mt-6">Contact & accès</h4>
+          <div className="flex flex-col justify-center items-center"></div>
         </div>
- <div className="hidden lg:flex flex-col px-28">
- <h4 className="font-light text-customTitle text-45px mt-14 mb-20">Contact & accès</h4>
- <div className="flex">
-    <div className="flex flex-col w-[50%]">
-<div className="text-20px">ME CONTACTER</div>
-<div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
-<div className="flex">
-<div className="flex items-center">
-<Image
-            src="/images/telephone_pictos_pauline.svg"
-            width={28}
-            height={28}
-            alt="Telephone Pauline"
-            className="w-[28px] h-auto"
-          />
-<div className="text-17px font-light pl-2 pr-4">09 80 45 18 63</div>
-</div>
-<div className="flex items-center">
-<Image
-            src="/images/email_pictos_pauline.svg"
-            width={32}
-            height={32}
-            alt="Email Pauline"
-            className="w-[32px] h-auto"
-          />
-                      <a
-              href="mailto:chiroajaccio@gmail.com"
-              className="text-17px font-light pl-2"
-            >
-chiroajaccio@gmail.com
-            </a>
+        <div className="hidden lg:flex flex-col px-28">
+          <h4 className="font-light text-customTitle text-45px mt-14 mb-20">
+            Contact & accès
+          </h4>
+          <div className="flex">
+            <div className="flex flex-col w-[50%]">
+              <div className="text-20px">ME CONTACTER</div>
+              <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
+              <div className="flex">
+                <div className="flex items-center">
+                  <Image
+                    src="/images/telephone_pictos_pauline.svg"
+                    width={28}
+                    height={28}
+                    alt="Telephone Pauline"
+                    className="w-[28px] h-auto"
+                  />
+                  <div className="text-17px font-light pl-2 pr-4">
+                    09 80 45 18 63
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Image
+                    src="/images/email_pictos_pauline.svg"
+                    width={32}
+                    height={32}
+                    alt="Email Pauline"
+                    className="w-[32px] h-auto"
+                  />
+                  <a
+                    href="mailto:chiroajaccio@gmail.com"
+                    className="text-17px font-light pl-2"
+                  >
+                    chiroajaccio@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
-</div>
-    </div>
-    <div className="flex flex-col w-[50%]">
-    <div className="text-20px">VENIR AU CABINET</div>
-    <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
-    <div className="flex">
-    <div className="flex items-center">
-    <Image
-            src="/images/parking_pictos_pauline.svg"
-            width={38}
-            height={38}
-            alt="Parking Pauline"
-            className="w-auto h-[38px]"
+            <div className="flex flex-col w-[50%]">
+              <div className="text-20px">VENIR AU CABINET</div>
+              <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
+              <div className="flex">
+                <div className="flex items-center">
+                  <Image
+                    src="/images/parking_pictos_pauline.svg"
+                    width={38}
+                    height={38}
+                    alt="Parking Pauline"
+                    className="w-auto h-[38px]"
+                  />
+                  <div className="text-17px font-light pl-2 pr-4">
+                    Parking Place Miot
+                  </div>
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/bus_pictos_pauline.svg"
+                      width={38}
+                      height={38}
+                      alt="Parking Pauline"
+                      className="w-auto h-[38px]"
+                    />
+                    <div className="flex flex-col leading-none">
+                      <p className="text-17px font-light">Bus 2 - 2Bis - 5</p>
+                      <p className="text-17px font-light">
+                        Arrêts Trottel ou Place Miot{" "}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:flex flex-col justify-center items-center">
+          <Image
+            src="/images/mappauline.webp"
+            width={1421}
+            height={460}
+            alt="Map pauline Chiropracteur Ajaccio"
+            className="hidden w-full h-auto lg:block mt-20"
           />
-    <div className="text-17px font-light pl-2 pr-4">Parking Place Miot</div>
-    <div className="flex items-center">
-    <Image
-            src="/images/bus_pictos_pauline.svg"
-            width={38}
-            height={38}
-            alt="Parking Pauline"
-            className="w-auto h-[38px]"
-          />
-              <div className="flex flex-col leading-none">
-                <p className="text-17px font-light">Bus 2 - 2Bis - 5 
-                </p>
-                <p className="text-17px font-light">Arrêts Trottel ou Place Miot </p>
-</div>
-</div>
-    </div>
-    </div>
-</div>
- </div>
- </div>
- <div className="hidden lg:flex flex-col justify-center items-center">
- <Image
-          src="/images/mappauline.webp"
-          width={1421}
-          height={460}
-          alt="Map pauline Chiropracteur Ajaccio"
-          className="hidden w-full h-auto lg:block mt-20"
-        />
- </div>
+        </div>
       </main>
     </div>
   );

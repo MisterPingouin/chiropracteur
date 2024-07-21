@@ -5,9 +5,15 @@ import Link from "next/link";
 const MentionsLegales = () => {
   return (
     <div className="text-17px lg:text-20px font-light px-8 lg:px-20 lg:leading-31px">
-      <h1 className="text-26px lg:text-45px font-medium text-customTitle py-12">Mentions légales</h1>
+      <h1 className="text-26px lg:text-45px font-medium text-customTitle py-12">
+        Mentions légales
+      </h1>
       <p>
-        Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l’économie numérique, dite L.C.E.N., nous portons à la connaissance des utilisateurs et visiteurs du site : www.chiropracteurajaccio.com les informations suivantes :
+        Conformément aux dispositions des articles 6-III et 19 de la Loi n°
+        2004-575 du 21 juin 2004 pour la Confiance dans l’économie numérique,
+        dite L.C.E.N., nous portons à la connaissance des utilisateurs et
+        visiteurs du site : www.chiropracteurajaccio.com les informations
+        suivantes :
       </p>
       <h2 className="py-8">1. Informations légales :</h2>
       <p>Statut du propriétaire : particulier</p>
