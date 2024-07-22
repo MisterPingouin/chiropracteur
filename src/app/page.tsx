@@ -49,14 +49,14 @@ export default function Home() {
           alt="Image Chiropracteur Ajaccio"
           className="w-full h-auto lg:hidden"
         />
-  <div className="hidden relative w-full h-[690px] lg:block">
-    <Image
-      src="/images/image1.webp"
-      layout="fill"
-      objectFit="cover"
-      alt="Image Chiropracteur Ajaccio"
-    />
-  </div>
+        <div className="hidden relative w-full h-[690px] lg:block">
+          <Image
+            src="/images/image1.webp"
+            layout="fill"
+            objectFit="cover"
+            alt="Image Chiropracteur Ajaccio"
+          />
+        </div>
         <div className="flex flex-col justify-center items-center font-light px-6 mt-4 lg:mt-14 lg:px-32">
           <div className="lg:flex lg:items-center lg:justify-center lg:flex-row-reverse lg:gap-32">
             <div
@@ -168,9 +168,7 @@ export default function Home() {
             className="w-[42px] lg:w-[47px] h-auto mt-2 mb-6 lg:mb-12"
           />
           <div className="w-full h-0.5 bg-line mb-6"></div>
-          <div
-            className="flex flex-col justify-center items-center px-2 pb-1"
-          >
+          <div className="flex flex-col justify-center items-center px-2 pb-1">
             <h3 className="text-customTitle text-25px lg:text-45px mb-2 text-center">
               Pour quels motifs consulter ?
             </h3>
@@ -178,7 +176,10 @@ export default function Home() {
               Voici quelques exemples de prise en charge chiropratique{" "}
             </p>
             <p className="text-center font-title lg:text-30px">PRÉVENTION :</p>
-            <p id="pourquoi-consulter"  className="leading-22px text-center px-6 mb-6 lg:text-20px">
+            <p
+              id="pourquoi-consulter"
+              className="leading-22px text-center px-6 mb-6 lg:text-20px"
+            >
               Bien-être, croissance, suivi de grossesse, suivi sportif,
               améliorer sa posture, prévenir l’arthrose…
             </p>
@@ -219,16 +220,82 @@ export default function Home() {
             passHref
             legacyBehavior
           >
-            <a  className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2 font-bold text-18 leading-tight tracking-wide lg:text-21px">
+            <a className="hidden lg:flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2 font-bold text-18 leading-tight tracking-wide lg:text-21px">
               PRENDRE RENDEZ-VOUS
             </a>
           </Link>
         </div>
-        <div id="contact-acces"></div>
         <div className="lg:hidden px-8">
-          <h4 className="text-customTitle text-2xl mt-6">Contact & accès</h4>
+          <h4 className="text-customTitle text-30px mt-4">Contact & accès</h4>
           <div className="flex flex-col justify-center items-center"></div>
         </div>
+        <div className="flex flex-col px-8 my-8 lg:hidden">
+          <div className="text-20px">ME CONTACTER</div>
+          <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
+          <div className="flex flex-col">
+            <div className="flex items-center">
+              <Image
+                src="/images/telephone_pictos_pauline.svg"
+                width={28}
+                height={28}
+                alt="Telephone Pauline"
+                className="w-[28px] h-auto"
+              />
+              <div className="text-17px font-light pl-2 pr-4">
+                09 80 45 18 63
+              </div>
+            </div>
+            <div className="flex items-center pt-3">
+              <Image
+                src="/images/email_pictos_pauline.svg"
+                width={32}
+                height={32}
+                alt="Email Pauline"
+                className="w-[32px] h-auto"
+              />
+              <a
+                href="mailto:chiroajaccio@gmail.com"
+                className="text-17px font-light pl-2"
+              >
+                chiroajaccio@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col px-8 lg:hidden">
+          <div className="text-20px">VENIR AU CABINET</div>
+          <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
+          <div className="flex flex-col">
+            <div className="flex items-center">
+              <Image
+                src="/images/parking_pictos_pauline.svg"
+                width={38}
+                height={38}
+                alt="Parking Pauline"
+                className="w-auto h-[38px]"
+              />
+              <div className="text-17px font-light pl-2">
+                Parking Place Miot
+              </div>
+            </div>
+            <div className="flex items-center pt-3">
+              <Image
+                src="/images/bus_pictos_pauline.svg"
+                width={38}
+                height={38}
+                alt="Parking Pauline"
+                className="w-auto h-[38px]"
+              />
+              <div className="flex flex-col leading-none pl-2">
+                <p className="text-17px font-light">Bus 2 - 2Bis - 5</p>
+                <p className="text-17px font-light">
+                  Arrêts Trottel ou Place Miot{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="contact-acces"></div>
         <div className="hidden lg:flex flex-col px-28">
           <h4 className="font-light text-customTitle text-45px mt-14 mb-20">
             Contact & accès
@@ -302,17 +369,36 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex flex-col justify-center items-center w-full">
-      <Link href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12da696b8a1a4da7:0xd102c886219860c5?sa=X&ved=1t:8290&ictx=111" passHref className="w-full">
-        <Image
-          src="/images/mappauline.webp"
-          width={1421}
-          height={460}
-          alt="Map pauline Chiropracteur Ajaccio"
-          className="w-full h-auto lg:block mt-20"
-        />
-      </Link>
-    </div>
+        <div className="hidden lg:block w-full">
+          <Link
+            href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12da696b8a1a4da7:0xd102c886219860c5?sa=X&ved=1t:8290&ictx=111"
+            passHref
+            className="w-full"
+          >
+            <Image
+              src="/images/mappauline.webp"
+              width={1421}
+              height={460}
+              alt="Map pauline Chiropracteur Ajaccio"
+              className="w-full h-auto lg:block mt-20"
+            />
+          </Link>
+        </div>
+        <div className="lg:hidden w-full">
+          <Link
+            href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12da696b8a1a4da7:0xd102c886219860c5?sa=X&ved=1t:8290&ictx=111"
+            passHref
+            className="w-full"
+          >
+            <Image
+              src="/images/mappauline.webp"
+              width={430}
+              height={264}
+              alt="Map pauline Chiropracteur Ajaccio"
+              className="w-full h-auto mt-10"
+            />
+          </Link>
+        </div>
       </main>
     </div>
   );

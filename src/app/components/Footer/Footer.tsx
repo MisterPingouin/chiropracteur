@@ -17,12 +17,12 @@ const Footer = () => {
             alt="Logo"
             className="w-[210px] h-auto mt-10"
           />
-          <div className="flex mb-8">
+          <div className="flex mb-8 w-[210px] justify-center">
             <Link
               href="/mentions-legales"
-              className="text-12px font-light text-black mt-0.5"
+              className="text-12px font-medium text-black mt-0.5 text-center w-full tracking-wider"
             >
-              Mentions légales | @paulinemarlin2024{" "}
+              Mentions légales | @paulinemarlin2024
             </Link>
           </div>
         </div>
