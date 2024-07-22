@@ -234,7 +234,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center"></div>
         </div>
         <div className="flex flex-col px-8 my-8 md:px-20  lg:hidden">
-          <div className="text-20px">ME CONTACTER</div>
+          <div className="text-14px">ME CONTACTER</div>
           <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
           <div className="flex flex-col">
             <div className="flex items-center">
@@ -267,7 +267,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col px-8 md:px-20 lg:hidden">
-          <div className="text-20px">VENIR AU CABINET</div>
+          <div className="text-14px">VENIR AU CABINET</div>
           <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
           <div className="flex flex-col">
             <div className="flex items-center">
