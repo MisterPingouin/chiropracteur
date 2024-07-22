@@ -2,8 +2,8 @@ import React, { useState, useCallback, useEffect, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import MenuButton from "./MenuButton";
 import { usePathname } from "next/navigation";
-import useSmoothScroll from '../../hooks/useSmoothScroll';
-import useIsMobile from '../../hooks/useIsMobile';
+import useSmoothScroll from "../../hooks/useSmoothScroll";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const MenuBurger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ const MenuBurger: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isMobile = useIsMobile();
-  const smoothScroll = useSmoothScroll(isMobile ? 0 : -350); 
+  const smoothScroll = useSmoothScroll(isMobile ? 0 : -350);
 
   const handleScroll = useCallback(() => {
     const scrolled = window.scrollY > 0;
@@ -59,7 +59,7 @@ const MenuBurger: React.FC = () => {
       window.location.href = href;
     } else {
       e.preventDefault();
-      setScrollTarget(href.replace('#', '')); 
+      setScrollTarget(href.replace("#", ""));
       toggleMenu();
     }
   };
@@ -119,9 +119,13 @@ const MenuBurger: React.FC = () => {
 
       <motion.div
         className={`fixed top-[60px] lg:top-[147px] left-0 w-full ${
-          isScrolled ? 'h-[calc(100vh-60px)] lg:h-[calc(100vh-147px)]' : 'h-[calc(100vh-60px)] lg:h-[543px]'
+          isScrolled
+            ? "h-[calc(100vh-60px)] lg:h-[calc(100vh-147px)]"
+            : "h-[calc(100vh-60px)] lg:h-[543px]"
         } ${
-          isOpen || isAnimating ? `bg-white ${isScrolled ? '' : 'lg:bg-opacity-50'}` : ""
+          isOpen || isAnimating
+            ? `bg-white ${isScrolled ? "" : "lg:bg-opacity-50"}`
+            : ""
         } flex flex-col tracking-wide z-30`}
         initial="closed"
         animate={isOpen ? "open" : "closed"}

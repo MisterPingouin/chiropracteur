@@ -72,6 +72,7 @@ export default function Home() {
                 Chiropraxie à Paris. Diplômée en 2017.
               </p>
             </div>
+            <div className="md:flex md:items-center md:justify-center md:text-center">
             <Image
               src="/images/photos_cadre1.webp"
               width={374}
@@ -86,6 +87,7 @@ export default function Home() {
               alt="Image Chiropracteur Pauline"
               className="hidden w-auto h-auto lg:block"
             />
+            </div>
           </div>
           <motion.div
             ref={ref1}
@@ -136,12 +138,13 @@ export default function Home() {
                 seniors, en passant par les sportifs et les femmes enceintes.{" "}
               </p>
             </div>
+            <div className="md:flex md:items-center md:justify-center md:text-center">
             <Image
               src="/images/photos_cadre2.webp"
               width={374}
               height={372}
               alt="Image Chiropracteur os"
-              className="w-auto h-auto hidden"
+              className="w-auto h-auto lg:hidden"
             />
             <Image
               src="/images/photos_cadre2.webp"
@@ -150,6 +153,7 @@ export default function Home() {
               alt="Image Chiropracteur os"
               className="hidden w-auto h-auto lg:block"
             />
+            </div>
           </div>
           <motion.div
             ref={ref2}
@@ -225,11 +229,11 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <div className="lg:hidden px-8">
+        <div className="lg:hidden px-8 md:px-20">
           <h4 className="text-customTitle text-30px mt-4">Contact & accès</h4>
           <div className="flex flex-col justify-center items-center"></div>
         </div>
-        <div className="flex flex-col px-8 my-8 lg:hidden">
+        <div className="flex flex-col px-8 my-8 md:px-20  lg:hidden">
           <div className="text-20px">ME CONTACTER</div>
           <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
           <div className="flex flex-col">
@@ -262,7 +266,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-8 lg:hidden">
+        <div className="flex flex-col px-8 md:px-20 lg:hidden">
           <div className="text-20px">VENIR AU CABINET</div>
           <div className="w-[217px] h-0.5 bg-borderColor mt-2 mb-8"></div>
           <div className="flex flex-col">
@@ -296,7 +300,7 @@ export default function Home() {
           </div>
         </div>
         <div id="contact-acces"></div>
-        <div className="hidden lg:flex flex-col px-28">
+        <div className="hidden flex-col px-28">
           <h4 className="font-light text-customTitle text-45px mt-14 mb-20">
             Contact & accès
           </h4>
