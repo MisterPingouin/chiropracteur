@@ -106,20 +106,20 @@ export default function Home() {
             className="w-[42px] lg:w-[47px] h-auto mb-6 lg:mb-12"
           />
           <Image
-            src="/images/img2chiro.png"
+            src="/images/image3.webp"
             width={374}
             height={372}
             alt="Image Chiropracteur Ajaccio"
             className="lg:hidden mb-6"
           />
           <Image
-            src="/images/img2chiro.jpg"
+            src="/images/image3.webp"
             width={1200}
             height={551}
             alt="Image Chiropracteur Ajaccio"
-            className="hidden w-full h-auto mb-6 lg:block"
+            className="hidden w-full h-[551px] mb-6 lg:block"
           />
-          <div className="lg:flex lg:items-center lg:justify-center lg:gap-32 lg:mb-10">
+          <div className="lg:flex lg:items-center lg:justify-center lg:gap-32 lg:mb-10 lg:mt-16">
             <div id="chiropraxie" className="flex flex-col px-2 pb-1">
               <h2 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">
                 La chiropraxie{" "}

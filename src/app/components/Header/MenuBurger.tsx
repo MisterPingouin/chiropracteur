@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, MouseEvent } from "react";
+import React, { useState, useCallback, useEffect, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import MenuButton from "./MenuButton";
 import { usePathname } from "next/navigation";
@@ -9,7 +9,32 @@ const MenuBurger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [scrollTarget, setScrollTarget] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname(); 
+
+  const handleScroll = useCallback(() => {
+    const scrolled = window.scrollY > 0;
+    setIsScrolled(scrolled);
+
+    if (isOpen && !isScrolled && window.innerWidth >= 1024) {
+      setIsOpen(false);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  useEffect(() => {
+    if (isOpen && window.innerWidth < 1024) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   const toggleMenu = useCallback(() => {
     if (pathname === "/mentions-legales") return; 
@@ -94,22 +119,24 @@ const MenuBurger: React.FC = () => {
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
       <motion.div
-        className={`fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] ${
-          isOpen || isAnimating ? "bg-white" : ""
+        className={`fixed top-[60px] lg:top-[147px] left-0 w-full ${
+          isScrolled ? 'h-[calc(100vh-60px)] lg:h-[calc(100vh-147px)]' : 'h-[calc(100vh-60px)] lg:h-[543px]'
+        } ${
+          isOpen || isAnimating ? `bg-white ${isScrolled ? '' : 'lg:bg-opacity-50'}` : ""
         } flex flex-col tracking-wide z-30`}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
         onAnimationComplete={handleAnimationComplete}
       >
-        <div className="flex flex-col p-8 mt-6 justify-start space-y-6">
+        <div className="flex flex-col p-8 mt-6 justify-start space-y-6 lg:space-y-0 lg:pl-20 lg:text-47px">
           {menuLinks.map(({ href, label }, index) => (
             <motion.a
               key={href}
               href={href}
               className={`border-b border-[#707070] pb-4 ${
                 index === menuLinks.length - 1 ? "mb-6" : ""
-              }`}
+              } lg:border-b-0 lg:border-none lg:pb-0 lg:hover:underline`}
               onClick={(e) => handleLinkClick(e, href)}
               variants={linkVariants}
             >

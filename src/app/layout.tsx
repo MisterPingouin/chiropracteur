@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Josefin_Sans, Cormorant } from "@next/font/google";
+import { Josefin_Sans, Cormorant } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
