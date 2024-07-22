@@ -302,15 +302,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex flex-col justify-center items-center">
-          <Image
-            src="/images/mappauline.webp"
-            width={1421}
-            height={460}
-            alt="Map pauline Chiropracteur Ajaccio"
-            className="hidden w-full h-auto lg:block mt-20"
-          />
-        </div>
+        <div className="hidden lg:flex flex-col justify-center items-center w-full">
+      <Link href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12da696b8a1a4da7:0xd102c886219860c5?sa=X&ved=1t:8290&ictx=111" passHref className="w-full">
+        <Image
+          src="/images/mappauline.webp"
+          width={1421}
+          height={460}
+          alt="Map pauline Chiropracteur Ajaccio"
+          className="w-full h-auto lg:block mt-20"
+        />
+      </Link>
+    </div>
       </main>
     </div>
   );
