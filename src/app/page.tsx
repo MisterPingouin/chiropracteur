@@ -300,7 +300,7 @@ export default function Home() {
           </div>
         </div>
         <div id="contact-acces"></div>
-        <div className="hidden flex-col px-28">
+        <div className="hidden flex-col px-28 lg:flex">
           <h4 className="font-light text-customTitle text-45px mt-14 mb-20">
             Contact & accès
           </h4>
