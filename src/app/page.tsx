@@ -43,19 +43,20 @@ export default function Home() {
           </a>
         </Link>
         <Image
-          src="/images/img1chiro.png"
+          src="/images/header_mobile.webp"
           width={428}
           height={323}
           alt="Image Chiropracteur Ajaccio"
-          className="w-auto h-auto lg:hidden"
+          className="w-full h-auto lg:hidden"
         />
-        <Image
-          src="/images/img1chiro.png"
-          width={700}
-          height={345}
-          alt="Image Chiropracteur Ajaccio"
-          className="hidden w-full h-auto lg:block"
-        />
+  <div className="hidden relative w-full h-[690px] lg:block">
+    <Image
+      src="/images/image1.webp"
+      layout="fill"
+      objectFit="cover"
+      alt="Image Chiropracteur Ajaccio"
+    />
+  </div>
         <div className="flex flex-col justify-center items-center font-light px-6 mt-4 lg:mt-14 lg:px-32">
           <div className="lg:flex lg:items-center lg:justify-center lg:flex-row-reverse lg:gap-32">
             <div
