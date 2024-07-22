@@ -169,7 +169,6 @@ export default function Home() {
           />
           <div className="w-full h-0.5 bg-line mb-6"></div>
           <div
-            id="pourquoi-consulter"
             className="flex flex-col justify-center items-center px-2 pb-1"
           >
             <h3 className="text-customTitle text-25px lg:text-45px mb-2 text-center">
@@ -179,7 +178,7 @@ export default function Home() {
               Voici quelques exemples de prise en charge chiropratique{" "}
             </p>
             <p className="text-center font-title lg:text-30px">PRÉVENTION :</p>
-            <p className="leading-22px text-center px-6 mb-6 lg:text-20px">
+            <p id="pourquoi-consulter"  className="leading-22px text-center px-6 mb-6 lg:text-20px">
               Bien-être, croissance, suivi de grossesse, suivi sportif,
               améliorer sa posture, prévenir l’arthrose…
             </p>
@@ -220,11 +219,12 @@ export default function Home() {
             passHref
             legacyBehavior
           >
-            <a className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2 font-bold text-18 leading-tight tracking-wide lg:text-21px">
+            <a  className="flex w-full h-[60px] lg:h-[81px] bg-customFont hover:bg-customHover items-center justify-center text-white py-2 font-bold text-18 leading-tight tracking-wide lg:text-21px">
               PRENDRE RENDEZ-VOUS
             </a>
           </Link>
         </div>
+        <div id="contact-acces"></div>
         <div className="lg:hidden px-8">
           <h4 className="text-customTitle text-2xl mt-6">Contact & accès</h4>
           <div className="flex flex-col justify-center items-center"></div>

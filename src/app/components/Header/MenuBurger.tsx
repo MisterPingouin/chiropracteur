@@ -1,16 +1,18 @@
-"use client";
-
 import React, { useState, useCallback, useEffect, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import MenuButton from "./MenuButton";
 import { usePathname } from "next/navigation";
+import useSmoothScroll from '../../hooks/useSmoothScroll';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const MenuBurger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [scrollTarget, setScrollTarget] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
+  const isMobile = useIsMobile();
+  const smoothScroll = useSmoothScroll(isMobile ? 0 : -350); 
 
   const handleScroll = useCallback(() => {
     const scrolled = window.scrollY > 0;
@@ -19,7 +21,7 @@ const MenuBurger: React.FC = () => {
     if (isOpen && !isScrolled && window.innerWidth >= 1024) {
       setIsOpen(false);
     }
-  }, [isOpen]);
+  }, [isOpen, isScrolled]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +39,7 @@ const MenuBurger: React.FC = () => {
   }, [isOpen]);
 
   const toggleMenu = useCallback(() => {
-    if (pathname === "/mentions-legales") return; 
+    if (pathname === "/mentions-legales") return;
     if (isOpen) {
       setIsAnimating(true);
     }
@@ -47,10 +49,7 @@ const MenuBurger: React.FC = () => {
   const handleAnimationComplete = () => {
     setIsAnimating(false);
     if (scrollTarget) {
-      const targetElement = document.querySelector(scrollTarget);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
+      smoothScroll(scrollTarget);
       setScrollTarget(null);
     }
   };
@@ -60,7 +59,7 @@ const MenuBurger: React.FC = () => {
       window.location.href = href;
     } else {
       e.preventDefault();
-      setScrollTarget(href);
+      setScrollTarget(href.replace('#', '')); 
       toggleMenu();
     }
   };
