@@ -63,7 +63,7 @@ export default function Home() {
               id="qui-suis-je"
               className="flex flex-col lg:justify-start px-2 pb-1 lg:w-[500px]"
             >
-              <h1 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">
+              <h1 className="text-customTitle text-30px px-3 lg:text-45px">
                 Qui suis-je ?
               </h1>
               <p className="leading-22px pb-6 px-2 lg:text-20px">
@@ -119,11 +119,11 @@ export default function Home() {
             width={1200}
             height={551}
             alt="Image Chiropracteur Ajaccio"
-            className="hidden w-full h-[551px] mb-6 lg:block"
+            className="hidden w-[1200px] h-auto mb-6 lg:block"
           />
           <div className="lg:flex lg:items-center lg:justify-center lg:gap-32 lg:mb-10 lg:mt-16">
             <div id="chiropraxie" className="flex flex-col px-2 pb-1">
-              <h2 className="text-customTitle text-30px px-3 lg:text-45px lg:font-bold">
+              <h2 className="text-customTitle text-30px px-3 lg:text-45px">
                 La chiropraxie{" "}
               </h2>
               <p className="leading-22px px-2 lg:w-[500px] lg:text-20px">
@@ -172,8 +172,8 @@ export default function Home() {
             className="w-[42px] lg:w-[47px] h-auto mt-2 mb-6 lg:mb-12"
           />
           <div className="w-full h-0.5 bg-line mb-6"></div>
-          <div className="flex flex-col justify-center items-center px-2 pb-1">
-            <h3 className="text-customTitle text-25px lg:text-45px mb-2 text-center">
+          <div  className="flex flex-col justify-center items-center px-2 pb-1">
+            <h3 id="pourquoi-consulter" className="text-customTitle text-25px lg:text-45px mb-2 text-center">
               Pour quels motifs consulter ?
             </h3>
             <p className="leading-22px text-center mb-8 lg:text-20px">
@@ -181,10 +181,9 @@ export default function Home() {
             </p>
             <p className="text-center font-title lg:text-30px">PRÉVENTION :</p>
             <p
-              id="pourquoi-consulter"
               className="leading-22px text-center px-6 mb-6 lg:text-20px"
             >
-              Bien-être, croissance, suivi de grossesse, suivi sportif,
+              Bien-être, développement du nourrisson, frein de langue restrictif, croissance, suivi de grossesse, suivi sportif,
               améliorer sa posture, prévenir l’arthrose…
             </p>
             <p className="text-center font-title lg:text-30px">
