@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const MentionsLegales = () => {
   return (
-    <div className="text-17px lg:text-20px font-light px-8 lg:px-20 lg:leading-31px">
+    <div className="text-17px lg:text-20px font-light px-8 lg:px-20 lg:leading-31px lg:mt-40">
       <h1 className="text-26px lg:text-45px font-medium text-customTitle py-12">
         Mentions légales
       </h1>
